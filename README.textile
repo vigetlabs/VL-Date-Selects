@@ -1,0 +1,28 @@
+h1. Date Selects
+
+Return select options for months, days, and years.
+
+h2. Example Usage:
+
+<pre>{exp:vl_date_selects start_year_offset="50" end_year_offset="21"}
+	<label for="month">Month</label>
+	<select name="month" id="month">
+		{months}
+	</select>
+	
+	<label for="day">Day</label>
+	<select name="day" id="day">
+		{days}
+	</select>
+	
+	<label for="year">Year</label>
+	<select name="year" id="year">
+		{years}
+	</select>
+{/exp:vl_date_selects}</pre>
+
+h2. Parameters:
+
+* *end_year_offset*: The number of years from the current year for the end range of years. If not specified, the current year will be used.
+
+* *start_year_offset*: The number of years from the calculated end year for the start range of years. If not specified, the start of the range will be 100 years less than the calculated end year.
